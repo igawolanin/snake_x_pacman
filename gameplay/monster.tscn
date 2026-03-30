@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://okvfsod0lwoo"]
+
+[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/epstein.png" id="1_p6760"]
+[ext_resource type="Script" uid="uid://yssh7f1hmll2" path="res://gameplay/monster.gd" id="1_veyoq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_veyoq"]
+
+[node name="monster" type="Area2D" unique_id=1511422410 groups=["monster"]]
+position = Vector2(3, 0)
+script = ExtResource("1_veyoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=357037396]
+shape = SubResource("CircleShape2D_veyoq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=176956830]
+position = Vector2(1, -1)
+texture = ExtResource("1_p6760")

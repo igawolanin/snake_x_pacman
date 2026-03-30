@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://e1xrx4wu5ybv"]
+
+[ext_resource type="Script" uid="uid://drp5i46qpwsfd" path="res://menus/start.gd" id="1_ig7tw"]
+[ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_qeakq"]
+
+[node name="Main" type="Node2D" unique_id=210171979]
+script = ExtResource("1_ig7tw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1811095461]
+
+[node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1036275405]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Panel2" unique_id=179923464]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0047957, 1)
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel2/HBoxContainer" unique_id=724765540]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=1576825464]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qeakq")
+theme_override_font_sizes/font_size = 176
+text = "Snake x Pacman"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=28675862]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qeakq")
+theme_override_font_sizes/font_size = 42
+text = "Escape the Island"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=293922861]
+layout_mode = 2
+theme_override_constants/margin_top = 84
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=788036670]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 61
+columns = 2
+
+[node name="PlayButton" type="Button" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=630518716]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_stretch_ratio = 3.35
+theme_override_fonts/font = ExtResource("2_qeakq")
+theme_override_font_sizes/font_size = 36
+text = "Play"
+
+[node name="ExitButton" type="Button" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1206986908]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qeakq")
+theme_override_font_sizes/font_size = 36
+text = "Exit"
+
+[connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/PlayButton" to="." method="_on_play_button_pressed"]

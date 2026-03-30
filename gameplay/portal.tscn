@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dvdtpveqsl00c"]
+
+[ext_resource type="Texture2D" uid="uid://dfo5rly1g2uy6" path="res://gameplay/sprites/Portals/portal_purple.png" id="1_kkkmv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7o6kn"]
+
+[node name="Portal" type="Area2D" unique_id=1427742053 groups=["portal"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1763744241]
+shape = SubResource("CircleShape2D_7o6kn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=387920085]
+texture = ExtResource("1_kkkmv")

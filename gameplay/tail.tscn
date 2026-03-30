@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://brrxy4xl41fu8"]
+
+[ext_resource type="Script" uid="uid://dsdmwmloayexk" path="res://gameplay/tail.gd" id="1_kioum"]
+[ext_resource type="Texture2D" uid="uid://dbl3lydqh34so" path="res://gameplay/sprites/snake_part.png" id="2_va2nl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mod2"]
+
+[node name="Tail" type="Area2D" unique_id=511478141]
+script = ExtResource("1_kioum")
+metadata/_custom_type_script = "uid://ba7yqv8kivldj"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1861089647]
+texture = ExtResource("2_va2nl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=261664440]
+shape = SubResource("CircleShape2D_8mod2")

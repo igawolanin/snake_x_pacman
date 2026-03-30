@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dtl3rvyfqm0uk"]
+
+[ext_resource type="Script" uid="uid://cfrhmohf1vtgl" path="res://menus/pause_menu.gd" id="1_p1qj3"]
+[ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_s0u37"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1966741107]
+process_mode = 3
+script = ExtResource("1_p1qj3")
+
+[node name="Panel2" type="Panel" parent="." unique_id=2125418517]
+modulate = Color(1, 1, 1, 0.7490196)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2" unique_id=1179079642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0047957, 1)
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/HBoxContainer" unique_id=2027400734]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel2/HBoxContainer/VBoxContainer" unique_id=1197782093]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s0u37")
+theme_override_font_sizes/font_size = 176
+text = "Game Paused"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2/HBoxContainer/VBoxContainer" unique_id=1686959399]
+layout_mode = 2
+theme_override_constants/margin_top = 84
+
+[node name="GridContainer" type="GridContainer" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=864463067]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 61
+columns = 2
+
+[node name="ResumeButton" type="Button" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=296497232]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_stretch_ratio = 3.35
+theme_override_fonts/font = ExtResource("1_s0u37")
+theme_override_font_sizes/font_size = 36
+text = "Resume"
+
+[node name="ExitButton" type="Button" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=975807902]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s0u37")
+theme_override_font_sizes/font_size = 36
+text = "Exit"
+
+[connection signal="pressed" from="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ExitButton" to="." method="_on_exit_button_pressed"]
