@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://drp5i46qpwsfd" path="res://menus/start.gd" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_qeakq"]
+[ext_resource type="Texture2D" uid="uid://bblyibry51dwo" path="res://gameplay/sprites/beach.png" id="2_ryxyv"]
 
 [node name="Main" type="Node2D" unique_id=210171979]
 script = ExtResource("1_ig7tw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1811095461]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1385234890]
+offset_right = 1600.0
+offset_bottom = 896.0
+texture = ExtResource("2_ryxyv")
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1036275405]
 anchors_preset = 15
