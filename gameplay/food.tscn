@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8rrdqi2jvijr"]
 
-[ext_resource type="Texture2D" uid="uid://brsdna5coo7bs" path="res://gameplay/sprites/apple.png" id="1_c7u7h"]
+[ext_resource type="Texture2D" uid="uid://82u37p2mmfh3" path="res://gameplay/sprites/pizza.png" id="1_c7u7h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vwpdc"]
 
