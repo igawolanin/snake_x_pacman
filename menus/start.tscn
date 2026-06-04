@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://drp5i46qpwsfd" path="res://menus/start.gd" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_qeakq"]
 [ext_resource type="Texture2D" uid="uid://bblyibry51dwo" path="res://gameplay/sprites/beach.png" id="2_ryxyv"]
+[ext_resource type="AudioStream" uid="uid://r1duu8da6mbb" path="res://gameplay/sounds/The_Long_Approach.mp3" id="4_6uap0"]
 
 [node name="Main" type="Control" unique_id=652332982]
 layout_mode = 3
@@ -78,6 +79,9 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_qeakq")
 theme_override_font_sizes/font_size = 36
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1933193778]
+stream = ExtResource("4_6uap0")
 
 [connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ExitButton" to="." method="_on_exit_pressed"]

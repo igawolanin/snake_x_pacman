@@ -1,7 +1,11 @@
-class_name GameOver extends CanvasLayer
+class_name GameWin extends CanvasLayer
 
 @onready var restart: Button = %RestartButton
 @onready var quit: Button = %QuitButton
+
+
+func _on_restart_button_pressed() -> void:
+	get_tree().reload_current_scene()
 
 
 func _on_quit_button_pressed() -> void:

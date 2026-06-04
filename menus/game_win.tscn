@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cel7iffka1acn"]
+
+[ext_resource type="Script" uid="uid://c8ikqu7f083me" path="res://menus/game_win.gd" id="1_byocu"]
+[ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_cajo6"]
+
+[node name="GameWin" type="CanvasLayer" unique_id=349934549]
+process_mode = 3
+script = ExtResource("1_byocu")
+
+[node name="Panel" type="Panel" parent="." unique_id=2097608950]
+modulate = Color(1, 1, 1, 0.7490196)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=510796997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0047957, 1)
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/HBoxContainer" unique_id=1718507498]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1591574158]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cajo6")
+theme_override_font_sizes/font_size = 176
+text = "YOU WON!!!"
+
+[node name="Label2" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1579029375]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cajo6")
+theme_override_font_sizes/font_size = 42
+text = "You managed to escape the island!"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/VBoxContainer" unique_id=704036650]
+layout_mode = 2
+theme_override_constants/margin_top = 84
+
+[node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer" unique_id=438199964]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_cajo6")
+theme_override_font_sizes/font_size = 36
+text = "Exit"
+
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/QuitButton" to="." method="_on_quit_button_pressed"]

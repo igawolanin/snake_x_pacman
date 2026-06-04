@@ -1,11 +1,8 @@
 class_name Monster
 extends Area2D
 
-@onready var upper_left: Marker2D = %UpperLeft
-@onready var lower_right: Marker2D = %LowerRight
-
-@export var step_size: int = Global.GRID_SIZE
 @export var move_vertical: bool = true
+@export var step_size: int = Global.GRID_SIZE
 
 var x_max: float
 var x_min: float
@@ -16,11 +13,7 @@ var direction: int = 1
 var last_position: Vector2
 
 func _ready() -> void:
-	x_min = upper_left.position.x
-	x_max = lower_right.position.x
-	y_min = upper_left.position.y
-	y_max = lower_right.position.y
-	last_position = position
+	move_vertical = randi_range(0,1)
 
 func move_enemy() -> void:
 	last_position = position

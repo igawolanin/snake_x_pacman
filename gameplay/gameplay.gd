@@ -5,6 +5,8 @@ const gameover_scene:PackedScene = preload("res://menus/game_over.tscn")
 var gameover_menu:GameOver
 const pausemenu_scene:PackedScene = preload("res://menus/pause_menu.tscn")
 var pause_menu:PauseMenu
+const gamewin_scene:PackedScene = preload("res://menus/game_win.tscn")
+var gamewin:GameWin
 
 @onready var head : Head = %Head as Head
 @onready var bounds:Bounds = %Bounds as Bounds
@@ -115,6 +117,51 @@ func pause_game():
 		add_child(pause_menu)
 
 func _on_portal_collision():
-	print("game won")
-	get_tree().paused = false
-	get_tree().call_deferred("change_scene_to_file","res://menus/start.tscn")
+	level += 1
+
+	if level > Global.MAX_LEVEL:
+		gamewin = gamewin_scene.instantiate() as GameWin
+		add_child(gamewin)
+		return
+
+	call_deferred("start_next_level")
+
+func start_next_level() -> void:
+	print("Starting level ", level)
+
+	reset_snake()
+	clear_level()
+
+	spawner.reset_spawn_data()
+	spawner.spawn_food()
+	spawner.spawn_enemies(level)
+	spawner.spawn_walls(level)
+
+func reset_snake() -> void:
+	move_dir = Vector2.RIGHT
+	time_since_last_move = 0
+	speed = 5000.0
+	eat_count = 0
+
+	head.position = Vector2.ZERO
+	head.last_position = head.position
+
+	# Remove all tail segments
+	for i in range(1, snake_parts.size()):
+		snake_parts[i].queue_free()
+
+	snake_parts.clear()
+	snake_parts.push_back(head)
+
+func clear_level() -> void:
+	for node in get_tree().get_nodes_in_group("monster"):
+		node.queue_free()
+
+	for node in get_tree().get_nodes_in_group("wall"):
+		node.queue_free()
+
+	for node in get_tree().get_nodes_in_group("food"):
+		node.queue_free()
+
+	for node in get_tree().get_nodes_in_group("portal"):
+		node.queue_free()
