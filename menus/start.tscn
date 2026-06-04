@@ -4,7 +4,9 @@
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_qeakq"]
 [ext_resource type="Texture2D" uid="uid://bblyibry51dwo" path="res://gameplay/sprites/beach.png" id="2_ryxyv"]
 
-[node name="Main" type="Node2D" unique_id=210171979]
+[node name="Main" type="Control" unique_id=652332982]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_ig7tw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1811095461]
@@ -78,3 +80,4 @@ theme_override_font_sizes/font_size = 36
 text = "Exit"
 
 [connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ExitButton" to="." method="_on_exit_pressed"]

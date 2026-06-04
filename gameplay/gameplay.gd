@@ -3,7 +3,6 @@ class_name Gameplay extends Node2D
 
 const gameover_scene:PackedScene = preload("res://menus/game_over.tscn")
 var gameover_menu:GameOver
-
 const pausemenu_scene:PackedScene = preload("res://menus/pause_menu.tscn")
 var pause_menu:PauseMenu
 
@@ -17,10 +16,12 @@ var time_since_last_move : float = 0
 var speed:float = 5000.0
 var snake_parts:Array[SnakePart] = []
 var level:int = 1
+var eat_count:int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	head.food_eaten.connect(_on_food_eaten)
+	head.collision_with_portal.connect(_on_portal_collision)
 	head.collision_with_tail.connect(_on_tail_colliding)
 	spawner.tail_added.connect(_on_tail_added)
 	spawner.spawn_food()
@@ -64,7 +65,6 @@ func update_snake():
 	var new_pos:Vector2 = head.position + move_dir * Global.GRID_SIZE
 	new_pos = bounds.wrap_vector(new_pos)
 	head.move_to(new_pos)
-	
 	for i in range(1, snake_parts.size(), 1):
 		snake_parts[i].move_to(snake_parts[i-1].last_position)
 		
@@ -86,6 +86,7 @@ func check_monster_collision() -> void:
 		
 func _on_food_eaten():
 	print("food eaten")
+	eat_count += 1
 	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position)
 	if (snake_parts.size() == Global.LENGTH_NEEDED_FOR_PORTAL):
 		spawner.call_deferred("spawn_portal")
@@ -116,3 +117,8 @@ func pause_game():
 	if not pause_menu:
 		pause_menu = pausemenu_scene.instantiate() as PauseMenu
 		add_child(pause_menu)
+
+func _on_portal_collision():
+	print("game won")
+	get_tree().paused = false
+	get_tree().call_deferred("change_scene_to_file","res://menus/start.tscn")

@@ -9,6 +9,6 @@ func _on_area_entered(area: Area2D) -> void:
 		food_eaten.emit()
 		area.call_deferred("queue_free")
 	elif area.is_in_group("portal"):
-		pass
+		collision_with_portal.emit()
 	else:
 		collision_with_tail.emit()
