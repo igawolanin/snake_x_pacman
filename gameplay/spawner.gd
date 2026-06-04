@@ -9,6 +9,7 @@ signal tail_added(tail:Tail)
 var food_scene:PackedScene = preload("res://gameplay/food.tscn")
 var tail_scene:PackedScene = preload("res://gameplay/tail.tscn")
 var portal_scene:PackedScene = preload("res://gameplay/portal.tscn")
+var wall_scene:PackedScene = preload("res://gameplay/wall.tscn")
 
 func spawn_food():
 	var spawn_point:Vector2 = Vector2.ZERO
@@ -20,7 +21,10 @@ func spawn_food():
 	var food = food_scene.instantiate()
 	food.position = spawn_point
 	get_parent().add_child(food)
-	
+
+func spawn_walls():
+	return
+
 func spawn_tail(pos:Vector2):
 	var tail:Tail = tail_scene.instantiate() as Tail
 	tail.position = pos

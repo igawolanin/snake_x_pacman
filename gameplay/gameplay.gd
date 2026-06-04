@@ -22,7 +22,8 @@ var eat_count:int = 0
 func _ready() -> void:
 	head.food_eaten.connect(_on_food_eaten)
 	head.collision_with_portal.connect(_on_portal_collision)
-	head.collision_with_tail.connect(_on_tail_colliding)
+	head.collision_with_tail.connect(_on_collision)
+	head.collision_with_wall.connect(_on_collision)
 	spawner.tail_added.connect(_on_tail_added)
 	spawner.spawn_food()
 	snake_parts.push_back(head)
@@ -56,7 +57,8 @@ func _physics_process(delta: float) -> void:
 	time_since_last_move += delta * speed
 	if time_since_last_move >= time_between_moves:
 		update_snake()
-		check_monster_collision()
+		check_enemy_collision()
+		check_wall_collision()
 		update_enemies()
 		time_since_last_move = 0
 		
@@ -71,17 +73,17 @@ func update_snake():
 func update_enemies():
 	for enemy in get_tree().get_nodes_in_group("monster"):
 		enemy.move_enemy()
-		
-func check_monster_collision() -> void:
-	for enemy in get_tree().get_nodes_in_group("monster"):
-		# normalna kolizja - to samo pole
-		if enemy.position == head.position:
-			_on_monster_colliding()
+
+func check_enemy_collision() -> void:
+	for object in get_tree().get_nodes_in_group("monster"):
+		if object.position == head.position or (object.last_position == head.position and object.position == head.last_position):
+			_on_collision()
 			return
 		
-		# zamiana miejsc w tym samym ticku
-		if enemy.last_position == head.position and enemy.position == head.last_position:
-			_on_monster_colliding()
+func check_wall_collision() -> void:
+	for object in get_tree().get_nodes_in_group("wall"):
+		if object.position == head.position:
+			_on_collision()
 			return
 		
 func _on_food_eaten():
@@ -97,13 +99,7 @@ func _on_food_eaten():
 func _on_tail_added(tail:Tail):
 	snake_parts.push_back(tail)
 	
-func _on_tail_colliding():
-	print("game over")
-	if not gameover_menu:
-		gameover_menu = gameover_scene.instantiate() as GameOver
-		add_child(gameover_menu)
-		
-func _on_monster_colliding():
+func _on_collision():
 	print("game over")
 	if not gameover_menu:
 		gameover_menu = gameover_scene.instantiate() as GameOver
