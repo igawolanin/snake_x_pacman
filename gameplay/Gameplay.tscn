@@ -26,7 +26,6 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 
 [node name="Head" parent="." unique_id=993557050 instance=ExtResource("2_vrd06")]
 unique_name_in_owner = true
-position = Vector2(320, 384)
 
 [node name="Bounds" type="Node2D" parent="." unique_id=894949556]
 unique_name_in_owner = true

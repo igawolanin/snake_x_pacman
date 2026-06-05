@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://inwanqaqu0cq"]
+
+[ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_sbxec"]
+
+[node name="Tutorial" type="CanvasLayer" unique_id=1382114978]
+
+[node name="Label2" type="Label" parent="." unique_id=1661195228]
+offset_top = 360.0
+offset_right = 530.0
+offset_bottom = 573.0
+theme_override_fonts/font = ExtResource("1_sbxec")
+theme_override_font_sizes/font_size = 42
+text = "Arrows or WASD to move.
+Collect pizza slices.
+Get to the door.
+Escape!"
+horizontal_alignment = 1

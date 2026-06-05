@@ -7,6 +7,8 @@ const pausemenu_scene:PackedScene = preload("res://menus/pause_menu.tscn")
 var pause_menu:PauseMenu
 const gamewin_scene:PackedScene = preload("res://menus/game_win.tscn")
 var gamewin:GameWin
+const tutorial_scene:PackedScene = preload("res://menus/tutorial.tscn")
+var tutorial:CanvasLayer
 
 @onready var head : Head = %Head as Head
 @onready var bounds:Bounds = %Bounds as Bounds
@@ -29,6 +31,11 @@ func _ready() -> void:
 	spawner.tail_added.connect(_on_tail_added)
 	spawner.spawn_food()
 	snake_parts.push_back(head)
+	tutorial = tutorial_scene.instantiate() as CanvasLayer
+	add_child(tutorial)
+	tutorial.layer = 20
+	spawner.spawn_enemies(1)
+	spawner.spawn_walls(2)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -131,6 +138,8 @@ func _on_portal_collision():
 
 func start_next_level() -> void:
 	print("Starting level ", level)
+	if level > 1:
+		tutorial.queue_free()
 
 	reset_snake()
 	clear_level()

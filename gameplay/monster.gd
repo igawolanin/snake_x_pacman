@@ -15,18 +15,33 @@ var last_position: Vector2
 func _ready() -> void:
 	move_vertical = randi_range(0,1)
 
+func has_wall_at(pos: Vector2) -> bool:
+	for wall in get_tree().get_nodes_in_group("wall"):
+		if wall.position == pos:
+			return true
+	return false
+	
 func move_enemy() -> void:
 	last_position = position
-	
 	if move_vertical:
-		var new_y = position.y + step_size * direction
-		if new_y > y_max or new_y < y_min:
+		var new_y := position.y + step_size * direction
+		var target := Vector2(position.x, new_y)
+		if (
+			new_y > y_max
+			or new_y < y_min
+			or has_wall_at(target)
+		):
 			direction *= -1
 			new_y = position.y + step_size * direction
 		position.y = new_y
 	else:
-		var new_x = position.x + step_size * direction
-		if new_x > x_max or new_x < x_min:
+		var new_x := position.x + step_size * direction
+		var target := Vector2(new_x, position.y)
+		if (
+			new_x > x_max
+			or new_x < x_min
+			or has_wall_at(target)
+		):
 			direction *= -1
 			new_x = position.x + step_size * direction
 		position.x = new_x
