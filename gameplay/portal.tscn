@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://7wi8r4f52xaq" path="res://gameplay/sprites/boat.png" id="1_kkkmv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkkmv"]
+size = Vector2(20, 12.75)
 
 [node name="Portal" type="Area2D" unique_id=1427742053 groups=["portal"]]
 

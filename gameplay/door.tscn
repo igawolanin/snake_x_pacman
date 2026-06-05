@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b6seya45ykvw1"]
+
+[ext_resource type="Texture2D" uid="uid://dje7dih41teeg" path="res://gameplay/sprites/door.png" id="1_55pfe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkkmv"]
+size = Vector2(20, 12.75)
+
+[node name="Door" type="Area2D" unique_id=1427742053 groups=["portal"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1763744241]
+position = Vector2(0, 8)
+scale = Vector2(3, 8)
+shape = SubResource("RectangleShape2D_kkkmv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=387920085]
+position = Vector2(0, 10.999996)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_55pfe")

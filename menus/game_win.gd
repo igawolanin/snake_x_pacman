@@ -1,6 +1,5 @@
 class_name GameWin extends CanvasLayer
 
-@onready var restart: Button = %RestartButton
 @onready var quit: Button = %QuitButton
 
 

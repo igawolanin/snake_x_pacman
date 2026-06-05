@@ -7,6 +7,7 @@ signal tail_added(tail:Tail)
 var food_scene:PackedScene = preload("res://gameplay/food.tscn")
 var tail_scene:PackedScene = preload("res://gameplay/tail.tscn")
 var portal_scene:PackedScene = preload("res://gameplay/portal.tscn")
+var door_scene:PackedScene = preload("res://gameplay/door.tscn")
 var wall_scene:PackedScene = preload("res://gameplay/wall.tscn")
 var enemy_scene:PackedScene = preload("res://gameplay/monster.tscn")
 
@@ -51,8 +52,12 @@ func spawn_enemies(count: int) -> void:
 
 		get_parent().add_child(enemy)
 		
-func spawn_portal():
-	var portal = portal_scene.instantiate()
+func spawn_portal(boat:bool):
+	var portal
+	if boat:
+		portal = portal_scene.instantiate()
+	else:
+		portal = door_scene.instantiate()
 	portal.position = get_free_grid_position()
 	get_parent().add_child(portal)
 

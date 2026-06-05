@@ -93,7 +93,10 @@ func _on_food_eaten():
 	eat_count += 1
 	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position)
 	if (snake_parts.size() == Global.LENGTH_NEEDED_FOR_PORTAL):
-		spawner.call_deferred("spawn_portal")
+		if level == Global.MAX_LEVEL:
+			spawner.call_deferred("spawn_portal", true)
+		else:
+			spawner.call_deferred("spawn_portal", false)
 	else: 
 		spawner.call_deferred("spawn_food")
 		speed += 500
