@@ -2,6 +2,559 @@
 
 [ext_resource type="Script" uid="uid://y1e6a8dw1x5x" path="res://menus/game_over.gd" id="1_mq8lb"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_v8xbx"]
+[ext_resource type="PackedScene" uid="uid://oaggc742n0ku" path="res://menus/anim_button.tscn" id="3_slp2k"]
+[ext_resource type="Texture2D" uid="uid://cnd8fmrc7j2tx" path="res://gameplay/sprites/Rocks/palm.png" id="4_mgyup"]
+[ext_resource type="Texture2D" uid="uid://dbwv3sby464xq" path="res://gameplay/sprites/Rocks/rock_5.png" id="4_oa3s2"]
+[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/little_girl.png" id="5_ydvg7"]
+[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/epstein.png" id="6_ydvg7"]
+[ext_resource type="Texture2D" uid="uid://v64jfvxur8t2" path="res://gameplay/sprites/Rocks/coconut.png" id="7_ntuu1"]
+
+[sub_resource type="Animation" id="Animation_r4gue"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Rock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Node2D/Palm:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/Node2D/Coconut:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/Epstein:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel/Epstein:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11.28125, 11.28125)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/Epstein:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel/Node2D/Palm:scale:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2.7475548]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Panel/Node2D/Coconut:offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Panel/Node2D/Coconut:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Panel/LittleGirl:offset")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Panel/LittleGirl:flip_h")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Panel/LittleGirl:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Panel/Node2D:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Panel/Rock:position:x")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-134.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Panel/Rock:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Panel/Splat:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Panel/LittleGirl:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vg5i6"]
+resource_name = "monster"
+length = 1.3666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Node2D/Palm:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.033333335),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Rock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/Epstein:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.3666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/Node2D/Coconut:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel/Epstein:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.26666668, 0.53333336, 0.8, 1.3666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(11.28125, 11.28125), Vector2(20, 20), Vector2(11.28125, 11.28125), Vector2(20, 20), Vector2(50, 50)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/Epstein:modulate:a")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8, 1.3666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel/LittleGirl:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_hde4o"]
+resource_name = "palm"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Node2D/Palm:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Rock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/Epstein:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/Node2D/Coconut:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel/Node2D/Palm:scale:y")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.46666664, 0.6333333, 0.8333333, 1.0333333, 1.2, 1.4, 1.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.7475548, 2.5, 2.7475548, 2.5, 2.7475548, 2.5, 2.748]
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/Node2D/Coconut:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 2, 2, 0, 2),
+"points": PackedFloat32Array(35.5, 0, 0, 0.061111115, 0.16666667, 0.5, -0.00016666668, -0.0004166667, 0.06650001, 0.16625002, 6.5, -0.00016666668, -0.015037595, 0.06633334, 5.984963, 6.5, -0.033, -2.4874372, 0.033333335, 2.512563, 36.5, -0.25, 0, 0.25, 0, -2.5, -0.033333335, 0.8333334, 0, 0, 27.5, -0.033333335, -6.166667, 0, 0, -11.5, -0.00016666453, 5.666667, 0, 0, 25.5, -0.027777782, -7.666667, 0, 0, 48.5, -0.30000007, -86.5, 0, 0, 70.5, -0.02222222, -0.8571429, 0.055555545, 2.142857, 115, -0.04444444, -0.44444445, 0.02222222, 0.22222222, 138, -0.008296725, -4.915805, 0.06666672, 39.5, 696, -1.7333333, 2, 0, 0),
+"times": PackedFloat32Array(0, 0.001, 0.002, 0.2, 0.4, 0.6333333, 0.8666667, 0.93333334, 1.1333333, 1.4, 1.6333334, 1.8, 2, 4.4333334)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel/Node2D/Coconut:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 2, 2, 2, 2, 0),
+"points": PackedFloat32Array(-68.5, 0, 0, 0.072222225, -13.000001, -78.5, -0.06666666, -1, 0.24851176, 3.7276766, -79.5, -0.12222223, 0.8333334, 0, 0, 221, -0.26666665, -158, 0, 0, 221, -0.33333325, -139, 0, 0, 218, -0.33333325, -75, 0, 0, 218, -0.13333344, -49, 0, 0, 218, -0.0333333, -32, 0, 0),
+"times": PackedFloat32Array(-0.1, 0.43333334, 1.6333334, 2, 2.6666667, 3.3666668, 3.9, 4.4333334)
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Panel/Node2D/Coconut:offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2000, 1200)]
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Panel/LittleGirl:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2),
+"points": PackedFloat32Array(800, -0.25, 0, 0.25, 0, 200, -0.0888889, 0.16666667, 0, 0, 200, -0.10555556, 17.54861, 0.09444445, -15.70139, 0.5, -0.100000024, 157, 0, 0),
+"times": PackedFloat32Array(0, 0.5, 1.1333333, 1.7)
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Panel/LittleGirl:offset")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(300, 250)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Panel/LittleGirl:flip_h")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(-0.033333335, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_ydvg7"]
+resource_name = "rock"
+length = 2.5666666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Rock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/LittleGirl:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel/Epstein:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Panel/Node2D:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Panel/Rock:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.5666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-134.0, 1750.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Panel/Rock:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5333333, 2.1, 2.5666666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 3.141592653589793, 6.283185307179586, 9.42477796076938, 12.566370614359172, 15.707963267948966]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Panel/Splat:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Panel/LittleGirl:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(900, 700)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Panel/LittleGirl:offset")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tcob2"]
+_data = {
+&"RESET": SubResource("Animation_r4gue"),
+&"monster": SubResource("Animation_vg5i6"),
+&"palm": SubResource("Animation_hde4o"),
+&"rock": SubResource("Animation_ydvg7")
+}
 
 [node name="GameOver" type="CanvasLayer" unique_id=349934549]
 process_mode = 3
@@ -32,12 +585,14 @@ layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1591574158]
+z_index = 105
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_v8xbx")
 theme_override_font_sizes/font_size = 176
 text = "GAME OVER!!!"
 
 [node name="Label2" type="Label" parent="Panel/HBoxContainer/VBoxContainer" unique_id=1579029375]
+z_index = 105
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_v8xbx")
 theme_override_font_sizes/font_size = 42
@@ -48,28 +603,62 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_constants/margin_top = 84
 
-[node name="GridContainer" type="GridContainer" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1385993235]
+[node name="ButtonContainer" type="Control" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1668846609]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/h_separation = 61
-columns = 2
 
-[node name="RestartButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=547699853]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_stretch_ratio = 3.35
-theme_override_fonts/font = ExtResource("1_v8xbx")
-theme_override_font_sizes/font_size = 36
+[node name="PlayButton" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer" unique_id=422699198 instance=ExtResource("3_slp2k")]
+layout_mode = 0
+offset_left = 159.819
+offset_top = -50.0
+offset_right = 459.819
+offset_bottom = 50.0
 text = "Restart"
 
-[node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=438199964]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_v8xbx")
-theme_override_font_sizes/font_size = 36
-text = "Exit"
+[node name="QuitButton2" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer" unique_id=1342995529 instance=ExtResource("3_slp2k")]
+layout_mode = 0
+offset_left = 557.91
+offset_top = -50.0
+offset_right = 857.91
+offset_bottom = 50.0
+text = "Quit
+"
 
-[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/RestartButton" to="." method="_on_restart_button_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="Splat" type="Sprite2D" parent="Panel" unique_id=1306638155]
+visible = false
+position = Vector2(906, 795)
+scale = Vector2(0.5, 0.1)
+texture = ExtResource("7_ntuu1")
+
+[node name="LittleGirl" type="Sprite2D" parent="Panel" unique_id=1779869948]
+position = Vector2(0.5, 0)
+scale = Vector2(3, 3)
+texture = ExtResource("5_ydvg7")
+
+[node name="Rock" type="Sprite2D" parent="Panel" unique_id=1714945021]
+position = Vector2(-134, 681)
+scale = Vector2(4.8617725, 4.838568)
+texture = ExtResource("4_oa3s2")
+
+[node name="Epstein" type="Sprite2D" parent="Panel" unique_id=1414911291]
+position = Vector2(813, 411)
+scale = Vector2(11.28125, 11.28125)
+texture = ExtResource("6_ydvg7")
+
+[node name="Node2D" type="Node2D" parent="Panel" unique_id=528951741]
+position = Vector2(274, 90)
+
+[node name="Palm" type="Sprite2D" parent="Panel/Node2D" unique_id=262938293]
+position = Vector2(700, 400)
+scale = Vector2(2.7607312, 2.7475548)
+texture = ExtResource("4_mgyup")
+
+[node name="Coconut" type="Sprite2D" parent="Panel/Node2D" unique_id=156877238]
+position = Vector2(0, 218)
+scale = Vector2(0.345, 0.345)
+texture = ExtResource("7_ntuu1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=348190136]
+libraries/ = SubResource("AnimationLibrary_tcob2")
+
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer/QuitButton2" to="." method="_on_quit_button_pressed"]

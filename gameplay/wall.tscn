@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dpgeav8a0fvx7"]
 
-[ext_resource type="Texture2D" uid="uid://c7r03y4gen0fi" path="res://gameplay/sprites/Rocks/rock_1.png" id="1_k6dsa"]
 [ext_resource type="Script" uid="uid://b7l8ojeaak4bh" path="res://gameplay/wall.gd" id="1_on3e6"]
+[ext_resource type="Texture2D" uid="uid://cnd8fmrc7j2tx" path="res://gameplay/sprites/Rocks/palm.png" id="2_on3e6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_on3e6"]
 
@@ -9,7 +9,7 @@
 script = ExtResource("1_on3e6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1026271089]
-texture = ExtResource("1_k6dsa")
+texture = ExtResource("2_on3e6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1829805872]
 scale = Vector2(2, 2)

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://j4ec4cmkjp07"]
+
+[ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_4yjx4"]
+[ext_resource type="Script" uid="uid://2823a483kp57" path="res://menus/score.gd" id="1_clx57"]
+
+[node name="Score" type="CanvasLayer" unique_id=2042119822]
+script = ExtResource("1_clx57")
+
+[node name="Label" type="Label" parent="." unique_id=876351590]
+offset_left = 2.0
+offset_top = 777.0
+offset_right = 287.0
+offset_bottom = 897.0
+theme_override_fonts/font = ExtResource("1_4yjx4")
+theme_override_font_sizes/font_size = 100
+text = "score"

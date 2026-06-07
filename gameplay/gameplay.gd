@@ -13,6 +13,7 @@ var tutorial:CanvasLayer
 @onready var head : Head = %Head as Head
 @onready var bounds:Bounds = %Bounds as Bounds
 @onready var spawner:Spawner = %Spawner as Spawner
+@onready var score:CanvasLayer = $Score as CanvasLayer
 
 var move_dir:Vector2 = Vector2.RIGHT # Vector2(1,0)
 var time_between_moves : float = 1000.0
@@ -21,6 +22,7 @@ var speed:float = 5000.0
 var snake_parts:Array[SnakePart] = []
 var level:int = 1
 var eat_count:int = 0
+var death:int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -86,12 +88,18 @@ func update_enemies():
 func check_enemy_collision() -> void:
 	for object in get_tree().get_nodes_in_group("monster"):
 		if object.position == head.position or (object.last_position == head.position and object.position == head.last_position):
+			death = 1
+			print("mo is 1")
 			_on_collision()
 			return
 		
 func check_wall_collision() -> void:
 	for object in get_tree().get_nodes_in_group("wall"):
 		if object.position == head.position:
+			if object.is_rock:
+				death = 3
+			else:
+				death = 2
 			_on_collision()
 			return
 		
@@ -107,15 +115,24 @@ func _on_food_eaten():
 	else: 
 		spawner.call_deferred("spawn_food")
 		speed += 500
+	score.change_score(eat_count)
 	
 func _on_tail_added(tail:Tail):
 	snake_parts.push_back(tail)
 	
 func _on_collision():
 	print("game over")
+	if tutorial:
+		tutorial.queue_free()
 	if not gameover_menu:
 		gameover_menu = gameover_scene.instantiate() as GameOver
 		add_child(gameover_menu)
+	if death == 1:
+		gameover_menu.anim.play("monster")
+	elif death == 2:
+		gameover_menu.anim.play("palm")
+	elif death == 3:
+		gameover_menu.anim.play("rock")
 		
 func _notification(what):
 	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT:
@@ -138,12 +155,12 @@ func _on_portal_collision():
 
 func start_next_level() -> void:
 	print("Starting level ", level)
-	if level > 1:
+	if level == 2:
 		tutorial.queue_free()
 
 	reset_snake()
 	clear_level()
-
+	score.change_score(0)
 	spawner.reset_spawn_data()
 	spawner.spawn_food()
 	spawner.spawn_enemies(level)

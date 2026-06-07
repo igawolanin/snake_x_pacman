@@ -1,7 +1,7 @@
 class_name PauseMenu extends CanvasLayer
 
-@onready var resume_button: Button = %ResumeButton
-@onready var exit_button: Button = %ExitButton
+@onready var resume_button: Button = %PlayButton
+@onready var exit_button: Button = %QuitButton2
 
 
 func _on_resume_button_pressed() -> void:
@@ -21,3 +21,7 @@ func _notification(what):
 			get_tree().paused = true
 		NOTIFICATION_EXIT_TREE:
 			get_tree().paused = false
+
+
+func _on_quit_button_pressed() -> void:
+	pass # Replace with function body.

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8ikqu7f083me" path="res://menus/game_win.gd" id="1_byocu"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_cajo6"]
+[ext_resource type="PackedScene" uid="uid://oaggc742n0ku" path="res://menus/anim_button.tscn" id="3_cajo6"]
 
 [node name="GameWin" type="CanvasLayer" unique_id=349934549]
 process_mode = 3
@@ -44,16 +45,16 @@ theme_override_font_sizes/font_size = 42
 text = "You managed to escape the island!"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer/VBoxContainer" unique_id=704036650]
+[node name="ButtonContainer" type="Control" parent="Panel/HBoxContainer/VBoxContainer" unique_id=745872806]
 layout_mode = 2
-theme_override_constants/margin_top = 84
 
-[node name="QuitButton" type="Button" parent="Panel/HBoxContainer/VBoxContainer/MarginContainer" unique_id=438199964]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_cajo6")
-theme_override_font_sizes/font_size = 36
-text = "Exit"
+[node name="QuitButton2" parent="Panel/HBoxContainer/VBoxContainer/ButtonContainer" unique_id=422699198 instance=ExtResource("3_cajo6")]
+layout_mode = 0
+offset_left = 246.89767
+offset_top = 27.0
+offset_right = 546.8977
+offset_bottom = 127.0
+text = "Quit
+"
 
-[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/MarginContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/VBoxContainer/ButtonContainer/QuitButton2" to="." method="_on_quit_button_pressed"]

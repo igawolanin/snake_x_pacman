@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://oaggc742n0ku"]
+
+[ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_dskf3"]
+[ext_resource type="Script" uid="uid://crgv6jb1kk437" path="res://menus/anim_button.gd" id="2_xm0pf"]
+
+[node name="AnimButton" type="Button" unique_id=422699198]
+unique_name_in_owner = true
+z_index = 105
+custom_minimum_size = Vector2(300, 100)
+size_flags_stretch_ratio = 3.35
+theme_override_fonts/font = ExtResource("1_dskf3")
+theme_override_font_sizes/font_size = 36
+text = "[click]"
+script = ExtResource("2_xm0pf")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

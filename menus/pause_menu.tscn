@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfrhmohf1vtgl" path="res://menus/pause_menu.gd" id="1_p1qj3"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_s0u37"]
+[ext_resource type="PackedScene" uid="uid://oaggc742n0ku" path="res://menus/anim_button.tscn" id="3_0wv6w"]
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1966741107]
 process_mode = 3
@@ -41,28 +42,25 @@ text = "Game Paused"
 layout_mode = 2
 theme_override_constants/margin_top = 84
 
-[node name="GridContainer" type="GridContainer" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=864463067]
+[node name="ButtonContainer" type="Control" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=272902241]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/h_separation = 61
-columns = 2
 
-[node name="ResumeButton" type="Button" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=296497232]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_stretch_ratio = 3.35
-theme_override_fonts/font = ExtResource("1_s0u37")
-theme_override_font_sizes/font_size = 36
+[node name="PlayButton" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer" unique_id=422699198 instance=ExtResource("3_0wv6w")]
+layout_mode = 0
+offset_left = 159.819
+offset_top = -50.0
+offset_right = 459.819
+offset_bottom = 50.0
 text = "Resume"
 
-[node name="ExitButton" type="Button" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=975807902]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("1_s0u37")
-theme_override_font_sizes/font_size = 36
-text = "Exit"
+[node name="QuitButton2" parent="Panel2/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer" unique_id=989882010 instance=ExtResource("3_0wv6w")]
+layout_mode = 0
+offset_left = 557.91
+offset_top = -50.0
+offset_right = 857.91
+offset_bottom = 50.0
+text = "Quit
+"
 
-[connection signal="pressed" from="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
-[connection signal="pressed" from="Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Panel2/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer/PlayButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Panel2/HBoxContainer/VBoxContainer/MarginContainer/ButtonContainer/QuitButton2" to="." method="_on_quit_button_pressed"]

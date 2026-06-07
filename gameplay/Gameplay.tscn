@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://blos82873grt4" path="res://gameplay/bounds.gd" id="3_q7ifm"]
 [ext_resource type="Script" uid="uid://edct0tvk4wcv" path="res://gameplay/spawner.gd" id="5_bsdk2"]
 [ext_resource type="AudioStream" uid="uid://r1duu8da6mbb" path="res://gameplay/sounds/The_Long_Approach.mp3" id="6_hld78"]
+[ext_resource type="PackedScene" uid="uid://j4ec4cmkjp07" path="res://menus/score.tscn" id="7_mv6oo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bsdk2"]
 texture = ExtResource("2_hld78")
@@ -46,3 +47,5 @@ bounds = NodePath("../Bounds")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1651409137]
 stream = ExtResource("6_hld78")
 autoplay = true
+
+[node name="Score" parent="." unique_id=2042119822 instance=ExtResource("7_mv6oo")]

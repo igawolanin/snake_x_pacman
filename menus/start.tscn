@@ -3,7 +3,270 @@
 [ext_resource type="Script" uid="uid://drp5i46qpwsfd" path="res://menus/start.gd" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_qeakq"]
 [ext_resource type="Texture2D" uid="uid://bblyibry51dwo" path="res://gameplay/sprites/beach.png" id="2_ryxyv"]
+[ext_resource type="Texture2D" uid="uid://dbl3lydqh34so" path="res://gameplay/sprites/snake_part.png" id="3_nnqjm"]
 [ext_resource type="AudioStream" uid="uid://r1duu8da6mbb" path="res://gameplay/sounds/The_Long_Approach.mp3" id="4_6uap0"]
+[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/little_girl.png" id="5_oh033"]
+[ext_resource type="PackedScene" uid="uid://oaggc742n0ku" path="res://menus/anim_button.tscn" id="6_lx5eq"]
+
+[sub_resource type="Animation" id="Animation_nnqjm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/SnakeGirl/SnakePart3:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_lx5eq"]
+resource_name = "snake-girl"
+length = 11.866667
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-2.5, -0.10960591, 22.469212, 0.4, -82, -97.5, -0.23333335, 4, 0, 0, -0.5, -0.100000024, -105, 0, 0, -100.5, -0.23333335, -18, 0, 0, -2.5, -0.0333333, -109, 0, 0, -100.5, -0.3666668, -16, 0, 0, -2.5, 0, -107, 0, 0, -99.5, -0.29999995, -17, 0, 0, -0.5, 0, -114, 0, 0, -99.5, -0.3000002, -16, 0, 0, -5.5, -0.16666651, -124, 0, -7, -100.5, -0.23333359, -9, 0, 0, -5.5, -0.100000024, -105, 0, 0, -105.5, -0.23333335, -18, 0, 0, -7.5, -0.0333333, -109, 0, 0, -105.5, -0.3666668, -16, 0, 0, -7.5, 0, -107, 0, 0, -104.5, -0.29999995, -17, 0, 0, -5.5, 0, -114, 0, 0, -104.5, -0.3000002, -16, 0, 0, -2.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(0.033333335, 0.6, 1.2333333, 1.6666666, 2.1666667, 2.7, 3.2, 3.7666667, 4.266667, 4.8333335, 5.4333334, 5.9666667, 6.481302, 6.914635, 7.414635, 7.947969, 8.4479685, 8.9, 9.333333, 9.833333, 10.333333)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1700.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/SnakeGirl/SnakePart3:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.3333334, 11.866667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1700.0]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/SnakeGirl/SnakePart1:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-2.5, 0, 0, 0, 0, -10.5, -0.0666666, 17, 0.3330908, -84.93824, -103.5, -0.23333335, 4, 0, 0, 3.5, -0.100000024, -105, 0, 0, -96.5, -0.23333335, -18, 0, 0, 1.5, -0.0333333, -109, 0, 0, -96.5, -0.3666668, -16, 0, 0, 1.5, 0, -107, 0, 0, -95.5, -0.29999995, -17, 0, 0, 3.5, 0, -114, 0, 0, -95.5, -0.3000002, -16, 0, 0, -1.5, -0.16666651, -124, 0, -7, -96.5, -0.23333359, -9, 0, 0, -1.5, -0.100000024, -105, 0, 0, -101.5, -0.23333335, -18, 0, 0, -3.5, -0.0333333, -109, 0, 0, -101.5, -0.3666668, -16, 0, 0, -3.5, 0, -107, 0, 0, -100.5, -0.29999995, -17, 0, 0, -1.5, 0, -114, 0, 0, -100.5, -0.3000002, -16, 0, 0, 1.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(0.59999996, 1.1, 1.5666667, 2.0333335, 2.466667, 2.8666668, 3.3333335, 3.833334, 4.4, 4.9, 5.4666667, 6.0666666, 6.6, 7.114635, 7.5479684, 8.047968, 8.581301, 9.081301, 9.647966, 10.147966, 10.714634, 11.181301)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/SnakeGirl/SnakePart1:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 11.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1700.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/SnakeGirl/SnakePart2:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 10.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1700.0]
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/SnakeGirl/SnakePart2:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.5, 0, 0, 0, 0, -1.5, 0, 0, 0, 0, -10.5, -0.0666666, 17, 0.3330908, -84.93824, -103.5, -0.23333335, 4, 0, 0, 3.5, -0.100000024, -105, 0, 0, -96.5, -0.23333335, -18, 0, 0, 1.5, -0.0333333, -109, 0, 0, -96.5, -0.3666668, -16, 0, 0, 1.5, 0, -107, 0, 0, -95.5, -0.29999995, -17, 0, 0, 3.5, 0, -114, 0, 0, -95.5, -0.3000002, -16, 0, 0, -1.5, -0.16666651, -124, 0, -7, -96.5, -0.23333359, -9, 0, 0, -1.5, -0.100000024, -105, 0, 0, -101.5, -0.23333335, -18, 0, 0, -3.5, -0.0333333, -109, 0, 0, -101.5, -0.3666668, -16, 0, 0, -3.5, 0, -107, 0, 0, -100.5, -0.29999995, -17, 0, 0, -1.5, 0, -114, 0, 0, -100.5, -0.3000002, -16, 0, 0, 1.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.76666665, 1.2333333, 1.7, 2.1333332, 2.6333334, 3.1666667, 3.666667, 4.2333336, 4.7333336, 5.3, 5.9, 6.4333334, 6.9479685, 7.381302, 7.8813014, 8.414635, 8.914635, 9.4813, 9.9813, 10.547968, 11.014635)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/SnakeGirl/SnakePart3:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-2.5, 0, 0, 0, 0, -3.5, 0, 0, 0, 0, -2.5, 0, 0, 0, 0, -11.5, -0.0666666, 17, 0.3330908, -84.93824, -104.5, -0.23333335, 4, 0, 0, 2.5, -0.100000024, -105, 0, 0, -97.5, -0.23333335, -18, 0, 0, 0.5, -0.0333333, -109, 0, 0, -97.5, -0.3666668, -16, 0, 0, 0.5, 0, -107, 0, 0, -96.5, -0.29999995, -17, 0, 0, 2.5, 0, -114, 0, 0, -96.5, -0.3000002, -16, 0, 0, -2.5, -0.16666651, -124, 0, -7, -97.5, -0.23333359, -9, 0, 0, -2.5, -0.100000024, -105, 0, 0, -102.5, -0.23333335, -18, 0, 0, -4.5, -0.0333333, -109, 0, 0, -102.5, -0.3666668, -16, 0, 0, -4.5, 0, -107, 0, 0, -101.5, -0.29999995, -17, 0, 0, -2.5, 0, -114, 0, 0, -101.5, -0.3000002, -16, 0, 0, 0.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(-0.36666667, 0.9333333, 0.9999999, 1.1666666, 1.6999999, 2.3333333, 2.7666664, 3.2666667, 3.7999997, 4.2999997, 4.8666663, 5.3666663, 5.933333, 6.5333333, 7.066666, 7.581301, 8.014635, 8.514635, 9.047968, 9.547968, 10.114634, 10.614634, 11.181301, 11.647968)
+}
+
+[sub_resource type="Animation" id="Animation_h4edq"]
+resource_name = "snake-girl-mirrored"
+length = 11.866667
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-2.5, -0.10960591, 22.469212, 0.4, -82, -97.5, -0.23333335, 4, 0, 0, -0.5, -0.100000024, -105, 0, 0, -100.5, -0.23333335, -18, 0, 0, -2.5, -0.0333333, -109, 0, 0, -100.5, -0.3666668, -16, 0, 0, -2.5, 0, -107, 0, 0, -99.5, -0.29999995, -17, 0, 0, -0.5, 0, -114, 0, 0, -99.5, -0.3000002, -16, 0, 0, -5.5, -0.16666651, -124, 0, -7, -100.5, -0.23333359, -9, 0, 0, -5.5, -0.100000024, -105, 0, 0, -105.5, -0.23333335, -18, 0, 0, -7.5, -0.0333333, -109, 0, 0, -105.5, -0.3666668, -16, 0, 0, -7.5, 0, -107, 0, 0, -104.5, -0.29999995, -17, 0, 0, -5.5, 0, -114, 0, 0, -104.5, -0.3000002, -16, 0, 0, -2.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(0.033333335, 0.6, 1.2333333, 1.6666666, 2.1666667, 2.7, 3.2, 3.7666667, 4.266667, 4.8333335, 5.4333334, 5.9666667, 6.481302, 6.914635, 7.414635, 7.947969, 8.4479685, 8.9, 9.333333, 9.833333, 10.333333)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1700.0, -60.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/SnakeGirl/SnakePart3:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.3333334, 11.866667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1700.0, 1700.0, -60.0]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/SnakeGirl/SnakePart1:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-2.5, 0, 0, 0, 0, -10.5, -0.0666666, 17, 0.3330908, -84.93824, -103.5, -0.23333335, 4, 0, 0, 3.5, -0.100000024, -105, 0, 0, -96.5, -0.23333335, -18, 0, 0, 1.5, -0.0333333, -109, 0, 0, -96.5, -0.3666668, -16, 0, 0, 1.5, 0, -107, 0, 0, -95.5, -0.29999995, -17, 0, 0, 3.5, 0, -114, 0, 0, -95.5, -0.3000002, -16, 0, 0, -1.5, -0.16666651, -124, 0, -7, -96.5, -0.23333359, -9, 0, 0, -1.5, -0.100000024, -105, 0, 0, -101.5, -0.23333335, -18, 0, 0, -3.5, -0.0333333, -109, 0, 0, -101.5, -0.3666668, -16, 0, 0, -3.5, 0, -107, 0, 0, -100.5, -0.29999995, -17, 0, 0, -1.5, 0, -114, 0, 0, -100.5, -0.3000002, -16, 0, 0, 1.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(0.59999996, 1.1, 1.5666667, 2.0333335, 2.466667, 2.8666668, 3.3333335, 3.833334, 4.4, 4.9, 5.4666667, 6.0666666, 6.6, 7.114635, 7.5479684, 8.047968, 8.581301, 9.081301, 9.647966, 10.147966, 10.714634, 11.181301)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer/SnakeGirl/SnakePart1:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 11.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1700.0, 1700.0, -60.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/SnakeGirl/SnakePart2:position:x")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.33333334, 10.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1700.0, 1700.0, -60.0]
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/SnakeGirl/SnakePart2:position:y")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-0.5, 0, 0, 0, 0, -1.5, 0, 0, 0, 0, -10.5, -0.0666666, 17, 0.3330908, -84.93824, -103.5, -0.23333335, 4, 0, 0, 3.5, -0.100000024, -105, 0, 0, -96.5, -0.23333335, -18, 0, 0, 1.5, -0.0333333, -109, 0, 0, -96.5, -0.3666668, -16, 0, 0, 1.5, 0, -107, 0, 0, -95.5, -0.29999995, -17, 0, 0, 3.5, 0, -114, 0, 0, -95.5, -0.3000002, -16, 0, 0, -1.5, -0.16666651, -124, 0, -7, -96.5, -0.23333359, -9, 0, 0, -1.5, -0.100000024, -105, 0, 0, -101.5, -0.23333335, -18, 0, 0, -3.5, -0.0333333, -109, 0, 0, -101.5, -0.3666668, -16, 0, 0, -3.5, 0, -107, 0, 0, -100.5, -0.29999995, -17, 0, 0, -1.5, 0, -114, 0, 0, -100.5, -0.3000002, -16, 0, 0, 1.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(0, 0.3, 0.76666665, 1.2333333, 1.7, 2.1333332, 2.6333334, 3.1666667, 3.666667, 4.2333336, 4.7333336, 5.3, 5.9, 6.4333334, 6.9479685, 7.381302, 7.8813014, 8.414635, 8.914635, 9.4813, 9.9813, 10.547968, 11.014635)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/SnakeGirl/SnakePart3:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-2.5, 0, 0, 0, 0, -3.5, 0, 0, 0, 0, -2.5, 0, 0, 0, 0, -11.5, -0.0666666, 17, 0.3330908, -84.93824, -104.5, -0.23333335, 4, 0, 0, 2.5, -0.100000024, -105, 0, 0, -97.5, -0.23333335, -18, 0, 0, 0.5, -0.0333333, -109, 0, 0, -97.5, -0.3666668, -16, 0, 0, 0.5, 0, -107, 0, 0, -96.5, -0.29999995, -17, 0, 0, 2.5, 0, -114, 0, 0, -96.5, -0.3000002, -16, 0, 0, -2.5, -0.16666651, -124, 0, -7, -97.5, -0.23333359, -9, 0, 0, -2.5, -0.100000024, -105, 0, 0, -102.5, -0.23333335, -18, 0, 0, -4.5, -0.0333333, -109, 0, 0, -102.5, -0.3666668, -16, 0, 0, -4.5, 0, -107, 0, 0, -101.5, -0.29999995, -17, 0, 0, -2.5, 0, -114, 0, 0, -101.5, -0.3000002, -16, 0, 0, 0.5, 0, -120, 0, 0),
+"times": PackedFloat32Array(-0.36666667, 0.9333333, 0.9999999, 1.1666666, 1.6999999, 2.3333333, 2.7666664, 3.2666667, 3.7999997, 4.2999997, 4.8666663, 5.3666663, 5.933333, 6.5333333, 7.066666, 7.581301, 8.014635, 8.514635, 9.047968, 9.547968, 10.114634, 10.614634, 11.181301, 11.647968)
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CanvasLayer/SnakeGirl/LittleGirl:flip_h")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o5xuk"]
+_data = {
+&"RESET": SubResource("Animation_nnqjm"),
+&"snake-girl": SubResource("Animation_lx5eq"),
+&"snake-girl-mirrored": SubResource("Animation_h4edq")
+}
 
 [node name="Main" type="Control" unique_id=652332982]
 layout_mode = 3
@@ -12,12 +275,36 @@ script = ExtResource("1_ig7tw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1811095461]
 
+[node name="SnakeGirl" type="Node2D" parent="CanvasLayer" unique_id=1039799241]
+z_index = 100
+position = Vector2(-6, 854)
+
+[node name="LittleGirl" type="Sprite2D" parent="CanvasLayer/SnakeGirl" unique_id=1122444906]
+z_index = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_oh033")
+flip_h = true
+
+[node name="SnakePart1" type="Sprite2D" parent="CanvasLayer/SnakeGirl" unique_id=1404665119]
+position = Vector2(1700, -2.5)
+texture = ExtResource("3_nnqjm")
+
+[node name="SnakePart2" type="Sprite2D" parent="CanvasLayer/SnakeGirl" unique_id=21754001]
+position = Vector2(1700, -0.5)
+texture = ExtResource("3_nnqjm")
+
+[node name="SnakePart3" type="Sprite2D" parent="CanvasLayer/SnakeGirl" unique_id=1390379049]
+position = Vector2(4, -2.782051)
+texture = ExtResource("3_nnqjm")
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1385234890]
+show_behind_parent = true
 offset_right = 1600.0
 offset_bottom = 896.0
 texture = ExtResource("2_ryxyv")
 
 [node name="Panel2" type="Panel" parent="CanvasLayer" unique_id=1036275405]
+z_index = 101
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,6 +317,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.0047957, 1)
@@ -41,47 +329,61 @@ layout_mode = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=1576825464]
+z_index = 104
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_qeakq")
 theme_override_font_sizes/font_size = 176
 text = "Snake x Pacman"
 
 [node name="Label2" type="Label" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=28675862]
+z_index = 104
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_qeakq")
 theme_override_font_sizes/font_size = 42
 text = "Escape the Island"
 horizontal_alignment = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=293922861]
+[node name="ButtonContainer" type="Control" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer" unique_id=1943159143]
 layout_mode = 2
-theme_override_constants/margin_top = 84
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=788036670]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/h_separation = 61
-columns = 2
-
-[node name="PlayButton" type="Button" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=630518716]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-size_flags_stretch_ratio = 3.35
-theme_override_fonts/font = ExtResource("2_qeakq")
-theme_override_font_sizes/font_size = 36
+[node name="PlayButton" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/ButtonContainer" unique_id=422699198 instance=ExtResource("6_lx5eq")]
+layout_mode = 0
+offset_left = 313.881
+offset_top = 40.0
+offset_right = 613.881
+offset_bottom = 140.0
 text = "Play"
 
-[node name="ExitButton" type="Button" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer" unique_id=1206986908]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
+[node name="QuitButton2" parent="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/ButtonContainer" unique_id=370781224 instance=ExtResource("6_lx5eq")]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 40.0
+offset_right = 1000.0
+offset_bottom = 140.0
+text = "Quit
+"
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel2" unique_id=621805790]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 13.0
+offset_right = 399.0
+offset_bottom = 172.0
+theme_override_colors/font_color = Color(0.73300546, 0.7330054, 0.7330054, 1)
 theme_override_fonts/font = ExtResource("2_qeakq")
-theme_override_font_sizes/font_size = 36
-text = "Exit"
+theme_override_font_sizes/font_size = 42
+text = "Made by:
+Biernat Magdalena
+Wolanin Iga"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1933193778]
 stream = ExtResource("4_6uap0")
 
-[connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/MarginContainer/GridContainer/ExitButton" to="." method="_on_exit_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1557232685]
+process_mode = 3
+reset_on_save = false
+libraries/ = SubResource("AnimationLibrary_o5xuk")
+autoplay = &"snake-girl"
+
+[connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/ButtonContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Panel2/HBoxContainer/VBoxContainer/ButtonContainer/QuitButton2" to="." method="_on_quit_button_2_pressed"]
