@@ -133,6 +133,9 @@ func _on_collision():
 		gameover_menu.anim.play("palm")
 	elif death == 3:
 		gameover_menu.anim.play("rock")
+	else:
+		gameover_menu.anim.play("tail")
+		gameover_menu.anim.movie_quit_on_finish == false
 		
 func _notification(what):
 	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT:
