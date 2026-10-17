@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://e0f3fu7kulvu"
-path="res://.godot/imported/portal_yrllo.png-6f2e0fe0e8189090575770091a4053de.ctex"
+path="res://.godot/imported/portal_yrllo.png-9b26c550887976b05e00b0f9390b10ae.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://gameplay/sprites/portals/portal_yrllo.png"
-dest_files=["res://.godot/imported/portal_yrllo.png-6f2e0fe0e8189090575770091a4053de.ctex"]
+dest_files=["res://.godot/imported/portal_yrllo.png-9b26c550887976b05e00b0f9390b10ae.ctex"]
 
 [params]
 

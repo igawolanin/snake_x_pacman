@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dx3q7ihj086q7"
-path="res://.godot/imported/grid_beach.png-f9d4bc307dae1551fda081acd7f756d0.ctex"
+path="res://.godot/imported/grid_beach.png-7143667ae49410657da60eaead87b1fd.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://gameplay/sprites/backgrounds/grid_beach.png"
-dest_files=["res://.godot/imported/grid_beach.png-f9d4bc307dae1551fda081acd7f756d0.ctex"]
+dest_files=["res://.godot/imported/grid_beach.png-7143667ae49410657da60eaead87b1fd.ctex"]
 
 [params]
 

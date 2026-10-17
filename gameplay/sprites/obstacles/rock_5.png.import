@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbwv3sby464xq"
-path="res://.godot/imported/rock_5.png-2f0e44c23af4561f4079d9f3a67bdb00.ctex"
+path="res://.godot/imported/rock_5.png-dac726cce269c2589751b3b324e73ea3.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://gameplay/sprites/obstacles/rock_5.png"
-dest_files=["res://.godot/imported/rock_5.png-2f0e44c23af4561f4079d9f3a67bdb00.ctex"]
+dest_files=["res://.godot/imported/rock_5.png-dac726cce269c2589751b3b324e73ea3.ctex"]
 
 [params]
 

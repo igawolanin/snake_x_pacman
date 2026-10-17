@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbl3lydqh34so"
-path="res://.godot/imported/snake_part.png-808cd7a6ceab08cf5e94c3871668bf5b.ctex"
+path="res://.godot/imported/snake_part.png-20d86a5b2c0d4ae6c4040d5f655c3ce1.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://gameplay/sprites/player/snake_part.png"
-dest_files=["res://.godot/imported/snake_part.png-808cd7a6ceab08cf5e94c3871668bf5b.ctex"]
+dest_files=["res://.godot/imported/snake_part.png-20d86a5b2c0d4ae6c4040d5f655c3ce1.ctex"]
 
 [params]
 
