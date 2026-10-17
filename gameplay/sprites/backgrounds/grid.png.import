@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsek0pfjof7ma"
-path="res://.godot/imported/portal_red.png-04f6e6a8410d79c4485a387b528c7827.ctex"
+uid="uid://c1wwv2tmmygyh"
+path="res://.godot/imported/grid.png-fee54b7f77630ab462d60ba96ebd85ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Portals/portal_red.png"
-dest_files=["res://.godot/imported/portal_red.png-04f6e6a8410d79c4485a387b528c7827.ctex"]
+source_file="res://gameplay/sprites/backgrounds/grid.png"
+dest_files=["res://.godot/imported/grid.png-fee54b7f77630ab462d60ba96ebd85ad.ctex"]
 
 [params]
 

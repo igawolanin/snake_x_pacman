@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://y1e6a8dw1x5x" path="res://menus/game_over.gd" id="1_mq8lb"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="1_v8xbx"]
 [ext_resource type="PackedScene" uid="uid://oaggc742n0ku" path="res://menus/anim_button.tscn" id="3_slp2k"]
-[ext_resource type="Texture2D" uid="uid://cnd8fmrc7j2tx" path="res://gameplay/sprites/Rocks/palm.png" id="4_mgyup"]
-[ext_resource type="Texture2D" uid="uid://dbwv3sby464xq" path="res://gameplay/sprites/Rocks/rock_5.png" id="4_oa3s2"]
-[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/little_girl.png" id="5_ydvg7"]
-[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/epstein.png" id="6_ydvg7"]
-[ext_resource type="Texture2D" uid="uid://v64jfvxur8t2" path="res://gameplay/sprites/Rocks/coconut.png" id="7_ntuu1"]
-[ext_resource type="Texture2D" uid="uid://dbl3lydqh34so" path="res://gameplay/sprites/snake_part.png" id="9_ydvg7"]
+[ext_resource type="Texture2D" uid="uid://cnd8fmrc7j2tx" path="res://gameplay/sprites/obstacles/palm.png" id="4_mgyup"]
+[ext_resource type="Texture2D" uid="uid://dbwv3sby464xq" path="res://gameplay/sprites/obstacles/rock_5.png" id="4_oa3s2"]
+[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/player/little_girl.png" id="5_ydvg7"]
+[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/monsters/epstein.png" id="6_ydvg7"]
+[ext_resource type="Texture2D" uid="uid://v64jfvxur8t2" path="res://gameplay/sprites/obstacles/coconut.png" id="7_ntuu1"]
+[ext_resource type="Texture2D" uid="uid://dbl3lydqh34so" path="res://gameplay/sprites/player/snake_part.png" id="9_ydvg7"]
 
 [sub_resource type="Animation" id="Animation_r4gue"]
 length = 0.001

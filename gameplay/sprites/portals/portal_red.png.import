@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc4dqkcruw0qg"
-path="res://.godot/imported/rock_3.png-b0672740f0ce2427dd1576affccc51c2.ctex"
+uid="uid://dsek0pfjof7ma"
+path="res://.godot/imported/portal_red.png-04f6e6a8410d79c4485a387b528c7827.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Rocks/rock_3.png"
-dest_files=["res://.godot/imported/rock_3.png-b0672740f0ce2427dd1576affccc51c2.ctex"]
+source_file="res://gameplay/sprites/portals/portal_red.png"
+dest_files=["res://.godot/imported/portal_red.png-04f6e6a8410d79c4485a387b528c7827.ctex"]
 
 [params]
 

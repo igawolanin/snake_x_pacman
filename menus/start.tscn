@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://drp5i46qpwsfd" path="res://menus/start.gd" id="1_ig7tw"]
 [ext_resource type="FontFile" uid="uid://di6n4rn6kbl6" path="res://gameplay/fonts/PixelifySans-Regular.ttf" id="2_qeakq"]
-[ext_resource type="Texture2D" uid="uid://bblyibry51dwo" path="res://gameplay/sprites/beach.png" id="2_ryxyv"]
-[ext_resource type="Texture2D" uid="uid://dbl3lydqh34so" path="res://gameplay/sprites/snake_part.png" id="3_nnqjm"]
+[ext_resource type="Texture2D" uid="uid://bblyibry51dwo" path="res://gameplay/sprites/backgrounds/beach.png" id="2_ryxyv"]
+[ext_resource type="Texture2D" uid="uid://dbl3lydqh34so" path="res://gameplay/sprites/player/snake_part.png" id="3_nnqjm"]
 [ext_resource type="AudioStream" uid="uid://r1duu8da6mbb" path="res://gameplay/sounds/The_Long_Approach.mp3" id="4_6uap0"]
-[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/little_girl.png" id="5_oh033"]
+[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/player/little_girl.png" id="5_oh033"]
 [ext_resource type="PackedScene" uid="uid://oaggc742n0ku" path="res://menus/anim_button.tscn" id="6_lx5eq"]
 
 [sub_resource type="Animation" id="Animation_nnqjm"]

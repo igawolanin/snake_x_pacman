@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://gameplay/sprites/Rocks/rock_5.png"
+source_file="res://gameplay/sprites/obstacles/rock_5.png"
 dest_files=["res://.godot/imported/rock_5.png-2f0e44c23af4561f4079d9f3a67bdb00.ctex"]
 
 [params]

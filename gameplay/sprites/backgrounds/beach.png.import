@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://82u37p2mmfh3"
-path="res://.godot/imported/pizza.png-e77bc9ca7d7d8c4196abbcd2c3cb7bf6.ctex"
+uid="uid://bblyibry51dwo"
+path="res://.godot/imported/beach.png-2e220d7666ded3542d8a106cfff098cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/pizza.png"
-dest_files=["res://.godot/imported/pizza.png-e77bc9ca7d7d8c4196abbcd2c3cb7bf6.ctex"]
+source_file="res://gameplay/sprites/backgrounds/beach.png"
+dest_files=["res://.godot/imported/beach.png-2e220d7666ded3542d8a106cfff098cc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dje7dih41teeg"
-path="res://.godot/imported/door.png-c8a735fee2e08b5c1855275c5a55bbc6.ctex"
+uid="uid://c0cicvgwbb2kv"
+path="res://.godot/imported/portal_blue.png-fd41e262fe5657803965f66f626745b3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/door.png"
-dest_files=["res://.godot/imported/door.png-c8a735fee2e08b5c1855275c5a55bbc6.ctex"]
+source_file="res://gameplay/sprites/portals/portal_blue.png"
+dest_files=["res://.godot/imported/portal_blue.png-fd41e262fe5657803965f66f626745b3.ctex"]
 
 [params]
 

@@ -1,13 +1,13 @@
 extends Node2D
 
 const ROCK_TEXTURES := [
-	preload("res://gameplay/sprites/Rocks/rock_1.png"),
-	preload("res://gameplay/sprites/Rocks/rock_2.png"),
-	preload("res://gameplay/sprites/Rocks/rock_3.png"),
-	preload("res://gameplay/sprites/Rocks/rock_4.png"),
-	preload("res://gameplay/sprites/Rocks/rock_5.png"),
-	preload("res://gameplay/sprites/Rocks/rock_6.png"),
-	preload("res://gameplay/sprites/Rocks/palm.png")
+	preload("res://gameplay/sprites/obstacles/rock_1.png"),
+	preload("res://gameplay/sprites/obstacles/rock_2.png"),
+	preload("res://gameplay/sprites/obstacles/rock_3.png"),
+	preload("res://gameplay/sprites/obstacles/rock_4.png"),
+	preload("res://gameplay/sprites/obstacles/rock_5.png"),
+	preload("res://gameplay/sprites/obstacles/rock_6.png"),
+	preload("res://gameplay/sprites/obstacles/palm.png")
 ]
 var is_rock:bool = true
 

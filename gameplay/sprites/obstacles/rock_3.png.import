@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://uvka8781ojmt"
-path="res://.godot/imported/rock_6.png-0f426dee761eecc28dc752dcecd19794.ctex"
+uid="uid://cc4dqkcruw0qg"
+path="res://.godot/imported/rock_3.png-b0672740f0ce2427dd1576affccc51c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Rocks/rock_6.png"
-dest_files=["res://.godot/imported/rock_6.png-0f426dee761eecc28dc752dcecd19794.ctex"]
+source_file="res://gameplay/sprites/obstacles/rock_3.png"
+dest_files=["res://.godot/imported/rock_3.png-b0672740f0ce2427dd1576affccc51c2.ctex"]
 
 [params]
 

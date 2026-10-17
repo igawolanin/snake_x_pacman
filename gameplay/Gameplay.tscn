@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d185o1cj4blqw"]
 
 [ext_resource type="Script" uid="uid://30r3y6p81teg" path="res://gameplay/gameplay.gd" id="1_inlal"]
-[ext_resource type="Texture2D" uid="uid://dx3q7ihj086q7" path="res://gameplay/sprites/grid_beach.png" id="2_hld78"]
+[ext_resource type="Texture2D" uid="uid://dx3q7ihj086q7" path="res://gameplay/sprites/backgrounds/grid_beach.png" id="2_hld78"]
 [ext_resource type="PackedScene" uid="uid://n8hfrcpdni22" path="res://gameplay/head.tscn" id="2_vrd06"]
 [ext_resource type="Script" uid="uid://blos82873grt4" path="res://gameplay/bounds.gd" id="3_q7ifm"]
 [ext_resource type="Script" uid="uid://edct0tvk4wcv" path="res://gameplay/spawner.gd" id="5_bsdk2"]

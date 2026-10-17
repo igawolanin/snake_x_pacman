@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6seya45ykvw1"]
 
-[ext_resource type="Texture2D" uid="uid://dje7dih41teeg" path="res://gameplay/sprites/door.png" id="1_55pfe"]
+[ext_resource type="Texture2D" uid="uid://dje7dih41teeg" path="res://gameplay/sprites/portals/door.png" id="1_55pfe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkkmv"]
 size = Vector2(20, 12.75)

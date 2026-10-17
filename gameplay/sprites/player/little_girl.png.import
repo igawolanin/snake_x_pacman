@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e0f3fu7kulvu"
-path="res://.godot/imported/portal_yrllo.png-6f2e0fe0e8189090575770091a4053de.ctex"
+uid="uid://dh8203gtho43q"
+path="res://.godot/imported/little_girl.png-20eb2dd5073ce9dece131f446f62979a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Portals/portal_yrllo.png"
-dest_files=["res://.godot/imported/portal_yrllo.png-6f2e0fe0e8189090575770091a4053de.ctex"]
+source_file="res://gameplay/sprites/player/little_girl.png"
+dest_files=["res://.godot/imported/little_girl.png-20eb2dd5073ce9dece131f446f62979a.ctex"]
 
 [params]
 

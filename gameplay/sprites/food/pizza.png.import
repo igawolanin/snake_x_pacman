@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dp4g8q872x21d"
-path="res://.godot/imported/rock_4.png-223cc4c56b4d1caf65867e433037b121.ctex"
+uid="uid://82u37p2mmfh3"
+path="res://.godot/imported/pizza.png-e77bc9ca7d7d8c4196abbcd2c3cb7bf6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Rocks/rock_4.png"
-dest_files=["res://.godot/imported/rock_4.png-223cc4c56b4d1caf65867e433037b121.ctex"]
+source_file="res://gameplay/sprites/food/pizza.png"
+dest_files=["res://.godot/imported/pizza.png-e77bc9ca7d7d8c4196abbcd2c3cb7bf6.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://n8hfrcpdni22"]
 
 [ext_resource type="Script" uid="uid://bqcqp5ubesi3p" path="res://gameplay/head.gd" id="1_hukeq"]
-[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/little_girl.png" id="1_xe7ry"]
+[ext_resource type="Texture2D" uid="uid://dh8203gtho43q" path="res://gameplay/sprites/player/little_girl.png" id="1_xe7ry"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hukeq"]
 

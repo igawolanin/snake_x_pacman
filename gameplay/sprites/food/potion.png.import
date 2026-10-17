@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v64jfvxur8t2"
-path="res://.godot/imported/coconut.png-f20bf19c3125c6ecc03fbd6b70dddb79.ctex"
+uid="uid://625b4ju4c4io"
+path="res://.godot/imported/potion.png-dd64d75b33148d6cc7495d5b179a5a6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Rocks/coconut.png"
-dest_files=["res://.godot/imported/coconut.png-f20bf19c3125c6ecc03fbd6b70dddb79.ctex"]
+source_file="res://gameplay/sprites/food/potion.png"
+dest_files=["res://.godot/imported/potion.png-dd64d75b33148d6cc7495d5b179a5a6e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfo5rly1g2uy6"
-path="res://.godot/imported/portal_purple.png-92ba57c436e7bc9d2135021e39c9dd67.ctex"
+uid="uid://nyxjcy112aan"
+path="res://.godot/imported/epstein.png-e253443aadd8cb682676f3afdaed51b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/Portals/portal_purple.png"
-dest_files=["res://.godot/imported/portal_purple.png-92ba57c436e7bc9d2135021e39c9dd67.ctex"]
+source_file="res://gameplay/sprites/monsters/epstein.png"
+dest_files=["res://.godot/imported/epstein.png-e253443aadd8cb682676f3afdaed51b4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brsdna5coo7bs"
-path="res://.godot/imported/apple.png-a5527a56c33a8f4be3b0657a75e59287.ctex"
+uid="uid://dp4g8q872x21d"
+path="res://.godot/imported/rock_4.png-223cc4c56b4d1caf65867e433037b121.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/apple.png"
-dest_files=["res://.godot/imported/apple.png-a5527a56c33a8f4be3b0657a75e59287.ctex"]
+source_file="res://gameplay/sprites/obstacles/rock_4.png"
+dest_files=["res://.godot/imported/rock_4.png-223cc4c56b4d1caf65867e433037b121.ctex"]
 
 [params]
 

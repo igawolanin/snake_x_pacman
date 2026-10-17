@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7wi8r4f52xaq"
-path="res://.godot/imported/boat.png-227581740aac9d2bdb0afec655bc8b25.ctex"
+uid="uid://cnd8fmrc7j2tx"
+path="res://.godot/imported/palm.png-ebf00934d27e9d9c2a04c7a958aeb9d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/boat.png"
-dest_files=["res://.godot/imported/boat.png-227581740aac9d2bdb0afec655bc8b25.ctex"]
+source_file="res://gameplay/sprites/obstacles/palm.png"
+dest_files=["res://.godot/imported/palm.png-ebf00934d27e9d9c2a04c7a958aeb9d4.ctex"]
 
 [params]
 

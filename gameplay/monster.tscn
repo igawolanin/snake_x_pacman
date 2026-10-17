@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://okvfsod0lwoo"]
 
-[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/epstein.png" id="1_p6760"]
+[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/monsters/epstein.png" id="1_p6760"]
 [ext_resource type="Script" uid="uid://yssh7f1hmll2" path="res://gameplay/monster.gd" id="1_veyoq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_veyoq"]
