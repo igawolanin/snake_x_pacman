@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0cicvgwbb2kv"
-path="res://.godot/imported/portal_blue.png-5732e4e52229e195ec24655133434ca6.ctex"
+uid="uid://kgk4wc2uhbgr"
+path="res://.godot/imported/trump.png-e23c21c2cd26f24caee838dfb7d0f3db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/portals/portal_blue.png"
-dest_files=["res://.godot/imported/portal_blue.png-5732e4e52229e195ec24655133434ca6.ctex"]
+source_file="res://gameplay/sprites/monsters/trump.png"
+dest_files=["res://.godot/imported/trump.png-e23c21c2cd26f24caee838dfb7d0f3db.ctex"]
 
 [params]
 

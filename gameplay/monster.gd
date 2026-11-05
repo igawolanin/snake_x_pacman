@@ -1,6 +1,15 @@
 class_name Monster
 extends Area2D
 
+#TODO allow skin change (like obstacles)
+
+const TEXTURES := [
+	preload("res://gameplay/sprites/monsters/musk.png"),
+	preload("res://gameplay/sprites/monsters/trump.png"),
+	preload("res://gameplay/sprites/monsters/clinton.png"),
+	preload("res://gameplay/sprites/monsters/epstein.png")
+]
+
 @export var move_vertical: bool = true
 @export var step_size: int = Global.GRID_SIZE
 
@@ -45,3 +54,8 @@ func move_enemy() -> void:
 			direction *= -1
 			new_x = position.x + step_size * direction
 		position.x = new_x
+
+func set_texture(level: int) -> void:
+	$Sprite2D.texture = TEXTURES[level - 1]
+	$Sprite2D.scale = Vector2.ONE
+	$Sprite2D.offset = Vector2.ZERO

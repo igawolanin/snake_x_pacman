@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1wwv2tmmygyh"
-path="res://.godot/imported/grid.png-35f478af7a9a4ea6515b7452c55c85c0.ctex"
+uid="uid://c2ghp2161b10m"
+path="res://.godot/imported/clinton.png-e54e63f6d3efdb0b8dab8dc572ba1456.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/backgrounds/grid.png"
-dest_files=["res://.godot/imported/grid.png-35f478af7a9a4ea6515b7452c55c85c0.ctex"]
+source_file="res://gameplay/sprites/monsters/clinton.png"
+dest_files=["res://.godot/imported/clinton.png-e54e63f6d3efdb0b8dab8dc572ba1456.ctex"]
 
 [params]
 

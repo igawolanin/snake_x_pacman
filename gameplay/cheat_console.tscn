@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cg4a5v5y182pu"]
+
+[ext_resource type="Script" uid="uid://qgeliirybb52" path="res://gameplay/cheat_console.gd" id="1_me03d"]
+
+[node name="CheatConsole" type="CanvasLayer" unique_id=1055131287]
+process_mode = 3
+script = ExtResource("1_me03d")
+
+[node name="Panel" type="Panel" parent="." unique_id=660831501]
+custom_minimum_size = Vector2(100, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1683291159]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Output" type="RichTextLabel" parent="Panel/VBoxContainer" unique_id=182240784]
+layout_mode = 2
+fit_content = true
+
+[node name="Input" type="LineEdit" parent="Panel/VBoxContainer" unique_id=226067609]
+layout_mode = 2

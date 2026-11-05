@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dhflyexasxmyj"]
+
+[ext_resource type="Texture2D" uid="uid://625b4ju4c4io" path="res://gameplay/sprites/food/potion.png" id="1_jj16g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_br115"]
+size = Vector2(30, 30)
+
+[node name="PowerUp" type="Area2D" unique_id=1440795179 groups=["food"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2033124751]
+shape = SubResource("RectangleShape2D_br115")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2010306096]
+texture = ExtResource("1_jj16g")

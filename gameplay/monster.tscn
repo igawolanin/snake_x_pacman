@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://okvfsod0lwoo"]
 
-[ext_resource type="Texture2D" uid="uid://nyxjcy112aan" path="res://gameplay/sprites/monsters/epstein.png" id="1_p6760"]
 [ext_resource type="Script" uid="uid://yssh7f1hmll2" path="res://gameplay/monster.gd" id="1_veyoq"]
+[ext_resource type="Texture2D" uid="uid://dkdgilxdclv75" path="res://gameplay/sprites/monsters/musk.png" id="2_veyoq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_veyoq"]
 
@@ -14,4 +14,4 @@ shape = SubResource("CircleShape2D_veyoq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=176956830]
 position = Vector2(1, -1)
-texture = ExtResource("1_p6760")
+texture = ExtResource("2_veyoq")

@@ -1,5 +1,6 @@
 class_name Gameplay extends Node2D
 
+#TODO pause game in cheat console
 
 const gameover_scene:PackedScene = preload("res://menus/game_over.tscn")
 var gameover_menu:GameOver
@@ -23,8 +24,8 @@ var snake_parts:Array[SnakePart] = []
 var level:int = 1
 var eat_count:int = 0
 var death:int = 0
+var invincible:bool = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	head.food_eaten.connect(_on_food_eaten)
 	head.collision_with_portal.connect(_on_portal_collision)
@@ -37,10 +38,10 @@ func _ready() -> void:
 	add_child(tutorial)
 	tutorial.layer = 20
 	spawner.spawn_enemies(1)
-	spawner.spawn_walls(2)
+	spawner.spawn_walls(1)
+	print("start level 1")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	if $AudioStreamPlayer.playing == false:
 		$AudioStreamPlayer.play()
@@ -86,56 +87,65 @@ func update_enemies():
 		enemy.move_enemy()
 
 func check_enemy_collision() -> void:
-	for object in get_tree().get_nodes_in_group("monster"):
-		if object.position == head.position or (object.last_position == head.position and object.position == head.last_position):
-			death = 1
-			print("mo is 1")
-			_on_collision()
-			return
-		
+	if not invincible:
+		for object in get_tree().get_nodes_in_group("monster"):
+			if object.position == head.position or (object.last_position == head.position and object.position == head.last_position):
+				death = 1
+				_on_collision()
+				return
+
 func check_wall_collision() -> void:
-	for object in get_tree().get_nodes_in_group("wall"):
-		if object.position == head.position:
-			if object.is_rock:
-				death = 3
-			else:
-				death = 2
-			_on_collision()
-			return
+	if not invincible:
+		for object in get_tree().get_nodes_in_group("wall"):
+			if object.position == head.position:
+				if object.is_rock:
+					death = 3
+				else:
+					death = 2
+				_on_collision()
+				return
 		
-func _on_food_eaten():
-	print("food eaten")
-	eat_count += 1
-	spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position)
-	if (snake_parts.size() == Global.LENGTH_NEEDED_FOR_PORTAL):
-		if level == Global.MAX_LEVEL:
-			spawner.call_deferred("spawn_portal", true)
-		else:
-			spawner.call_deferred("spawn_portal", false)
-	else: 
-		spawner.call_deferred("spawn_food")
-		speed += 500
-	score.change_score(eat_count)
+func _on_food_eaten(type):
+	if "power_up" in type:
+		print("power-up started")
+		invincible = true
+		$Timer.start()
+	else:
+		print("food eaten")
+		eat_count += 1
+		spawner.call_deferred("spawn_tail", snake_parts[snake_parts.size()-1].last_position)
+		if (snake_parts.size() == Global.LENGTH_NEEDED_FOR_PORTAL):
+			if level == Global.MAX_LEVEL:
+				spawner.call_deferred("spawn_portal", true)
+			else:
+				spawner.call_deferred("spawn_portal", false)
+		else: 
+			spawner.call_deferred("spawn_food")
+			spawner.call_deferred("spawn_power_up")
+			speed += 500
+		score.change_score(eat_count)
 	
 func _on_tail_added(tail:Tail):
 	snake_parts.push_back(tail)
 	
 func _on_collision():
-	print("game over")
-	if tutorial:
-		tutorial.queue_free()
-	if not gameover_menu:
-		gameover_menu = gameover_scene.instantiate() as GameOver
-		add_child(gameover_menu)
-	if death == 1:
-		gameover_menu.anim.play("monster")
-	elif death == 2:
-		gameover_menu.anim.play("palm")
-	elif death == 3:
-		gameover_menu.anim.play("rock")
-	else:
-		gameover_menu.anim.play("tail")
-		gameover_menu.anim.movie_quit_on_finish == false
+	if not invincible:
+		print("game over")
+		if tutorial:
+			tutorial.queue_free()
+		if not gameover_menu:
+			gameover_menu = gameover_scene.instantiate() as GameOver
+			add_child(gameover_menu)
+		if death == 1:
+			gameover_menu.anim.play("monster")
+		elif death == 2:
+			gameover_menu.anim.play("palm")
+		elif death == 3:
+			gameover_menu.anim.play("rock")
+		else:
+			gameover_menu.anim.play("tail")
+			@warning_ignore("standalone_expression")
+			gameover_menu.anim.movie_quit_on_finish == false
 		
 func _notification(what):
 	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT:
@@ -148,6 +158,7 @@ func pause_game():
 
 func _on_portal_collision():
 	level += 1
+	print("start level " + str(level))
 
 	if level > Global.MAX_LEVEL:
 		gamewin = gamewin_scene.instantiate() as GameWin
@@ -157,10 +168,16 @@ func _on_portal_collision():
 	call_deferred("start_next_level")
 
 func start_next_level() -> void:
-	print("Starting level ", level)
-	if level == 2:
-		tutorial.queue_free()
-
+	var tile_set = $TileMap.tile_set
+	var atlas = tile_set.get_source(0) as TileSetAtlasSource
+	match level:
+		2:
+			atlas.texture = preload("res://gameplay/sprites/backgrounds/manor_grid.png")
+			tutorial.queue_free()
+		3:
+			atlas.texture = preload("res://gameplay/sprites/backgrounds/chapel_grid.png")
+		4:
+			atlas.texture = preload("res://gameplay/sprites/backgrounds/grid_beach.png")
 	reset_snake()
 	clear_level()
 	score.change_score(0)
@@ -197,3 +214,10 @@ func clear_level() -> void:
 
 	for node in get_tree().get_nodes_in_group("portal"):
 		node.queue_free()
+
+func _on_timer_timeout() -> void:
+	invincible = false
+	print("power-up ended")
+
+func _on_cheat_console_cheat() -> void:
+	pass 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfo5rly1g2uy6"
-path="res://.godot/imported/portal_purple.png-a120b26aa40846608cf3b0d250701bf7.ctex"
+uid="uid://dxka3e7i4ek7m"
+path="res://.godot/imported/round_table.png-efeebbd48c94170d41d7c0a3b97132d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/portals/portal_purple.png"
-dest_files=["res://.godot/imported/portal_purple.png-a120b26aa40846608cf3b0d250701bf7.ctex"]
+source_file="res://gameplay/sprites/furniture/round_table.png"
+dest_files=["res://.godot/imported/round_table.png-efeebbd48c94170d41d7c0a3b97132d3.ctex"]
 
 [params]
 

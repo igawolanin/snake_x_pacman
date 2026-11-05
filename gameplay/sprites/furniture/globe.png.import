@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e0f3fu7kulvu"
-path="res://.godot/imported/portal_yrllo.png-9b26c550887976b05e00b0f9390b10ae.ctex"
+uid="uid://dcj5c0nptsjxr"
+path="res://.godot/imported/globe.png-eb66c53ed4ce5b86d25985d65ccbfe19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gameplay/sprites/portals/portal_yrllo.png"
-dest_files=["res://.godot/imported/portal_yrllo.png-9b26c550887976b05e00b0f9390b10ae.ctex"]
+source_file="res://gameplay/sprites/furniture/globe.png"
+dest_files=["res://.godot/imported/globe.png-eb66c53ed4ce5b86d25985d65ccbfe19.ctex"]
 
 [params]
 

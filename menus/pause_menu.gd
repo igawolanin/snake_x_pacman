@@ -24,4 +24,7 @@ func _notification(what):
 
 
 func _on_quit_button_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().call_deferred(
+			"change_scene_to_file",
+			"res://menus/start.tscn"
+		)
